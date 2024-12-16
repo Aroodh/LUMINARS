@@ -1,0 +1,120 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Container for Team Profile */
+.team-profile-container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Title Styling */
+.team-profile-container h1 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #555;
+
+}
+
+.main-container {
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Team Members Grid */
+.team-members {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+/* Individual Team Member */
+.team-member {
+    width: 40%;
+    text-align: center;
+    background-color: rgb(248, 245, 245);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Member Hover Effect */
+.team-member:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Circular Image Styling */
+.team-member .image {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 15px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid #ddd;
+}
+
+.team-member .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Team Member Details */
+.team-member h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.team-member p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #666;
+}
+
+/* Section Divider: Team Members */
+.team-members::before {
+    content: "Team Members";
+    display: block;
+    font-size: 1.5rem;
+    color: #888;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn.resume {
+    background-color: #f64949;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.btn.biodata {
+    background-color: #34e0d2;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+}
