@@ -1,120 +1,233 @@
-/* General Reset */
+/* Premium Design: Elegant & Sophisticated */
+
+/* Font Import for Premium Typography */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+/* General Reset with Premium Approach */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
-/* Body Styling */
+/* Body Styling with Luxurious Gradient */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
-    color: #333;
+    font-family: 'Inter', Arial, sans-serif;
+    background: linear-gradient(
+        225deg, 
+        #1a2a4a 0%, 
+        #233663 25%, 
+        #2c4577 50%, 
+        #355591 75%, 
+        #3e67ab 100%
+    );
+    background-size: 400% 400%;
+    color: #ffffff;
     text-align: center;
-    padding: 20px;
+    min-height: 100vh;
+    padding: 40px 20px;
+    background-attachment: fixed;
+    animation: luxuryGradient 15s ease infinite;
 }
 
-/* Container for Team Profile */
+/* Luxurious Gradient Animation */
+@keyframes luxuryGradient {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+/* Premium Container */
 .team-profile-container {
-    width: 80%;
+    width: 90%;
+    max-width: 1400px;
     margin: 0 auto;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 
+        0 25px 45px rgba(0, 0, 0, 0.1),
+        0 10px 20px rgba(0, 0, 0, 0.06);
+    padding: 50px;
+    overflow: hidden;
+    position: relative;
 }
 
-/* Title Styling */
+/* Elegant Title */
 .team-profile-container h1 {
-    font-size: 2rem;
-    margin-bottom: 30px;
-    color: #555;
-
+    font-size: 3rem;
+    margin-bottom: 40px;
+    color: #ffffff;
+    font-weight: 700;
+    letter-spacing: -1px;
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 1;
 }
 
 .main-container {
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
 }
 
-/* Team Members Grid */
+/* Team Members Layout */
 .team-members {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
-
+    gap: 40px;
+    position: relative;
+    width: 100%;
 }
 
-/* Individual Team Member */
+/* Individual Team Member Card */
 .team-member {
     width: 40%;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 35px;
     text-align: center;
-    background-color: rgb(248, 245, 245);
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 
+        0 15px 35px rgba(0, 0, 0, 0.1),
+        0 5px 15px rgba(0, 0, 0, 0.05);
+    position: relative;
+    overflow: hidden;
 }
 
-/* Member Hover Effect */
+/* Hover Effect for Team Member */
 .team-member:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+    box-shadow: 
+        0 25px 50px rgba(0, 0, 0, 0.15),
+        0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
-/* Circular Image Styling */
+/* Glowing Effect on Hover */
+.team-member::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(
+        circle at center, 
+        rgba(255, 255, 255, 0.2) 0%, 
+        transparent 70%
+    );
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.team-member:hover::before {
+    opacity: 1;
+}
+
+/* Circular Image with Premium Touch */
 .team-member .image {
-    width: 120px;
-    height: 120px;
-    margin: 0 auto 15px;
+    width: 180px;
+    height: 180px;
+    margin: 0 auto 25px;
     border-radius: 50%;
     overflow: hidden;
-    border: 3px solid #ddd;
+    border: 5px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 
+        0 15px 30px rgba(0, 0, 0, 0.15),
+        0 5px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
 }
 
 .team-member .image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.team-member .image:hover img {
+    transform: scale(1.1);
 }
 
 /* Team Member Details */
 .team-member h3 {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-    color: #555;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #ffffff;
+    font-weight: 600;
+    letter-spacing: -0.5px;
 }
 
 .team-member p {
-    font-size: 0.9rem;
-    line-height: 1.5;
-    color: #666;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 300;
 }
 
-/* Section Divider: Team Members */
+/* Section Divider */
 .team-members::before {
     content: "Team Members";
     display: block;
-    font-size: 1.5rem;
-    color: #888;
-    margin-bottom: 20px;
+    font-size: 1.8rem;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 30px;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 3px;
+    font-weight: 300;
+}
+
+/* Premium Button Styling */
+.btn {
+    display: inline-block;
+    margin: 15px;
+    padding: 15px 30px;
+    border-radius: 15px;
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
 }
 
 .btn.resume {
-    background-color: #f64949;
+    background: linear-gradient(45deg, #ff416c, #ff4b2b);
     color: white;
-    border: none;
-    padding: 10px;
-    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(255, 65, 108, 0.3);
+    cursor: pointer;
 }
 
 .btn.biodata {
-    background-color: #34e0d2;
+    background: linear-gradient(45deg, #11998e, #38ef7d);
     color: white;
-    border: none;
-    padding: 10px;
-    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(17, 153, 142, 0.3);
+    cursor: pointer;
+}
+
+.btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 
+        0 15px 35px rgba(0, 0, 0, 0.2),
+        0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .team-members {
+        flex-direction: column;
+    }
+    .team-member {
+        width: 80%;
+    }
 }
